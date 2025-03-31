@@ -8,7 +8,8 @@
 # from DataStructures.LinkedList.cicularDoubly import CircularDoublyLinkedList
 # from DataStructures.Stack.stackUsingArray import Stack
 # from DataStructures.Stack.stackUsingLinkedlist import Stack
-from DataStructures.Queue.UsingArray import queue, deque, CircularQueue, PriorityQueue
+# from DataStructures.Queue.UsingArray import queue, deque, CircularQueue, PriorityQueue
+from DataStructures.Queue.UsingLinkedlist import queue, deque, CircularQueue
 
 # array = Array()
 # array.insert(65)
@@ -152,7 +153,40 @@ from DataStructures.Queue.UsingArray import queue, deque, CircularQueue, Priorit
 # Queue.rear()
 # Queue.size()
 
-Queue = PriorityQueue()
+# Queue = PriorityQueue()
+# Queue.enqueue(62)
+# Queue.enqueue(21)
+# Queue.enqueue(54)
+# Queue.enqueue(74)
+# Queue.dequeue()
+# Queue.dequeue()
+# Queue.front()
+# Queue.rear()
+# Queue.size()
+
+# Queue = queue()
+# Queue.enqueue(62)
+# Queue.enqueue(21)
+# Queue.enqueue(54)
+# Queue.enqueue(74)
+# Queue.dequeue()
+# Queue.dequeue()
+# Queue.front()
+# Queue.rear()
+# Queue.size()
+
+# Queue = deque()
+# Queue.enqueueFront(62)
+# Queue.enqueueRear(21)
+# Queue.enqueueFront(54)
+# Queue.enqueueRear(74)
+# Queue.dequeueFront()
+# Queue.dequeueRear()
+# Queue.front()
+# Queue.rear()
+# Queue.size()
+
+Queue = CircularQueue()
 Queue.enqueue(62)
 Queue.enqueue(21)
 Queue.enqueue(54)

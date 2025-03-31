@@ -122,6 +122,17 @@ class deque:
     
 
 class CircularQueue:
+    """
+    A Circular Queue is a linear data structure that follows the FIFO (First In, First Out) principle but connects the rear to the front, forming a circle. It prevents memory wastage by reusing empty spaces.
+
+    It supports the following operations:
+        - Enqueue: Inserts an element at the rear.
+        - Dequeue: Removes an element from the front.
+        - Get Front: Retrieves the front element.
+        - Get Rear: Retrieves the rear element.
+
+    When the queue reaches the end, it wraps around to utilize available space. Circular Queues are commonly used in buffering systems, scheduling algorithms, and network packet handling.
+    """
     def __init__(self, size : int = 8):
         self.__size = size
         self.__queue = [None] * size
@@ -130,6 +141,11 @@ class CircularQueue:
         self.__count = 0
 
     def enqueue(self, data):
+        """
+        This method adds an element at the rear.
+
+        Time Complexity: O(1)
+        """
         if self.__count == self.__size:
             print("ERROR: Circular Queue is full")
             return
@@ -140,6 +156,11 @@ class CircularQueue:
         print(f"{data} is enqueued in the Circular Queue")
 
     def dequeue(self):
+        """
+        This method removes an element from the front.
+
+        Time Complexity: O(1)
+        """
         if self.__count == 0:
             print("ERROR: Circular Queue is empty")
             return
@@ -166,15 +187,35 @@ class CircularQueue:
 
     
 class PriorityQueue:
+    """
+    A Priority Queue is a special type of queue where elements are dequeued based on priority rather than the order of insertion. Each element has an associated priority, and elements with higher priority are served first.
+
+    It supports the following operations:
+        - Enqueue: Inserts an element with a priority.
+        - Dequeue: Removes the element with the highest priority.
+        - Peek: Retrieves the highest-priority element without removing it.
+
+    Priority Queues can be implemented using arrays, linked lists, or heaps (min-heap or max-heap). They are widely used in scheduling systems, Dijkstra’s algorithm, and event-driven simulations.
+    """
     def __init__(self):
         self.__queue = []
     
     def enqueue(self, data):
+        """
+        This method removes an element from the front.
+
+        Time Complexity: O(1)
+        """
         self.__queue.append(data)
         self.__queue.sort(reverse=True)
         print(f"{data} is enqueued in the Priority Queue")
     
     def dequeue(self):
+        """
+        This method removes an element from the front.
+
+        Time Complexity: O(1)
+        """
         if len(self.__queue) == 0:
             print("ERROR: Priority Queue is empty")
             return
