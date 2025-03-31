@@ -9,7 +9,10 @@
 # from DataStructures.Stack.stackUsingArray import Stack
 # from DataStructures.Stack.stackUsingLinkedlist import Stack
 # from DataStructures.Queue.UsingArray import queue, deque, CircularQueue, PriorityQueue
-from DataStructures.Queue.UsingLinkedlist import queue, deque, CircularQueue
+# from DataStructures.Queue.UsingLinkedlist import queue, deque, CircularQueue
+# from DataStructures.Hash.hash import Hash
+
+from Algorithms.Searching.searchingAlgorithm import linearSearch, binarySearch, jumpSearch, interpolationSearch
 
 # array = Array()
 # array.insert(65)
@@ -186,13 +189,34 @@ from DataStructures.Queue.UsingLinkedlist import queue, deque, CircularQueue
 # Queue.rear()
 # Queue.size()
 
-Queue = CircularQueue()
-Queue.enqueue(62)
-Queue.enqueue(21)
-Queue.enqueue(54)
-Queue.enqueue(74)
-Queue.dequeue()
-Queue.dequeue()
-Queue.front()
-Queue.rear()
-Queue.size()
+# Queue = CircularQueue()
+# Queue.enqueue(62)
+# Queue.enqueue(21)
+# Queue.enqueue(54)
+# Queue.enqueue(74)
+# Queue.dequeue()
+# Queue.dequeue()
+# Queue.front()
+# Queue.rear()
+# Queue.size()
+
+# hashing = Hash(size=4)
+# hashing.set("id", 21)
+# hashing.set("name", "sumit")
+# hashing.set("class", "SY")
+# hashing.set("language", "python")
+# hashing.put("id", 97)
+# hashing.get("name")
+# hashing.delete("class")
+
+numbers = [20, 30, 40, 50, 60, 70, 80]
+linearsearch = linearSearch(numbers, 60)
+binarysearch = binarySearch(numbers, 60)
+jupmsearch = jumpSearch(numbers, 60)
+intersearch = interpolationSearch(numbers, 60)
+
+outlist = [linearsearch, binarysearch, jupmsearch, intersearch]
+
+for i in outlist:
+    if i > 0: print(f"Found 60 at index {i}")
+    else: print(f"Not found")
